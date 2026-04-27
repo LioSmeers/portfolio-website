@@ -7,11 +7,13 @@
   <meta name="description" content="Portfolio van Lio Smeers — graphic design, branding, fotografie en video.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="page-glow"></div>
+  <div class="page-noise"></div>
+  <div class="page-gradient gradient-one" data-depth="0.18"></div>
+  <div class="page-gradient gradient-two" data-depth="0.1"></div>
   <div class="scroll-line"></div>
 
   <header class="site-header">
@@ -27,159 +29,228 @@
   <main id="top">
     <section class="hero section reveal">
       <div class="hero-copy">
-        <p class="eyebrow">Graphic Design • Branding • Foto • Video</p>
-        <h1>I build visual stories that <span>hit harder</span> than generic content.</h1>
+        <p class="eyebrow">Graphic design / branding / foto / video</p>
+        <p class="hero-kicker">Visual worlds with pulse, tension and atmosphere.</p>
+        <h1>I make brands and visuals feel <span>alive</span>, not assembled.</h1>
         <p class="hero-text">
-          Ik ben Lio Smeers, een creatieve maker met een focus op design, beeld en merkbeleving.
-          Ik help merken en projecten sterker communiceren met een visuele stijl die niet vergeetbaar is.
+          Ik ben Lio Smeers. Ik bouw identiteiten, beelden en digitale presentaties die niet aanvoelen
+          als een template, maar als een duidelijke wereld met karakter, ritme en richting.
         </p>
         <div class="hero-actions">
           <a href="#work" class="button primary">Bekijk mijn werk</a>
-          <a href="#contact" class="button secondary">Contacteer mij</a>
+          <a href="#contact" class="button secondary">Start een project</a>
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="image-frame large">
+      <div class="hero-stage">
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="hero-card image-frame tilt-card" data-tilt>
           <img src="images/lio-portrait.png" alt="Portret van Lio Smeers">
         </div>
-        <div class="floating-note note-one">Creative direction</div>
-        <div class="floating-note note-two">Immersive visuals</div>
+        <div class="floating-note note-one">Art direction with feeling</div>
+        <div class="floating-note note-two">Less polished-template, more presence</div>
+        <div class="hero-caption">
+          <span>Based in Belgium</span>
+          <span>Available for visual identities, content and digital experiences</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee-band reveal" aria-label="Creative focus">
+      <div class="marquee-track">
+        <span>Brand identities with tension</span>
+        <span>Editorial rhythm</span>
+        <span>Photography with atmosphere</span>
+        <span>Digital experiences with mood</span>
+        <span>Campaign visuals that stay with you</span>
+        <span>Brand identities with tension</span>
+        <span>Editorial rhythm</span>
+        <span>Photography with atmosphere</span>
+        <span>Digital experiences with mood</span>
+        <span>Campaign visuals that stay with you</span>
       </div>
     </section>
 
     <section id="about" class="about section reveal">
-      <div class="section-heading">
-        <p class="eyebrow">Over mij</p>
-        <h2>Niet gewoon mooi. <span>Doordacht.</span></h2>
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">Over mij</p>
+          <h2>Geen brave vormgeving. <span>Wel een eigen sfeer.</span></h2>
+        </div>
+        <p class="section-intro">
+          Mijn stijl zit tussen editorial design, beeldcultuur en merkgevoel in. Ik hou van werk dat rustig
+          aanvoelt, maar toch spanning heeft. Geen overvolle layouts. Geen goedkope “coolness”. Wel keuzes die kloppen.
+        </p>
       </div>
 
-      <div class="about-grid">
-        <div class="about-text card glass">
+      <div class="about-layout">
+        <article class="about-panel card glass">
           <p>
-            Mijn werk zit op het snijpunt van design, storytelling en strategie.
-            Ik hou van visuele concepten die sfeer opbouwen en tegelijk helder communiceren.
-            Geen drukke rommel, geen standaard templates — wel sterk beeld, duidelijke richting en een eigen vibe.
+            Ik werk graag op het snijpunt van design, storytelling en strategie. Dat kan branding zijn,
+            fotografie, video of een website die meer doet dan alleen informatie tonen.
           </p>
           <p>
-            Ik werk graag aan branding, campagnes, fotografie, video en digitale ervaringen.
-            Vooral projecten waar gevoel, stijl en verhaal samenkomen, passen bij mij.
+            Wat me interesseert, zijn projecten waar beeld en gevoel samen een sterk geheel vormen. De juiste
+            typografie, de juiste stilte, de juiste intensiteit: daar zit voor mij het verschil.
           </p>
-        </div>
+        </article>
 
-        <div class="stats-grid">
-          <article class="stat card">
-            <span>01</span>
-            <h3>Branding</h3>
-            <p>Identiteit, logo, typografie en visuele richting.</p>
+        <div class="about-side">
+          <article class="stat-strip">
+            <span class="stat-number">01</span>
+            <div>
+              <h3>Brand systems</h3>
+              <p>Logo, typografie, kleur en een visuele taal die niet los zand blijft.</p>
+            </div>
           </article>
-          <article class="stat card">
-            <span>02</span>
-            <h3>Foto / Video</h3>
-            <p>Beeld dat een merk of verhaal tastbaar maakt.</p>
+          <article class="stat-strip">
+            <span class="stat-number">02</span>
+            <div>
+              <h3>Image & motion</h3>
+              <p>Fotografie en video die sfeer niet uitleggen, maar meteen laten voelen.</p>
+            </div>
           </article>
-          <article class="stat card">
-            <span>03</span>
-            <h3>Digital</h3>
-            <p>Websites en content met ritme, hiërarchie en sfeer.</p>
+          <article class="stat-strip">
+            <span class="stat-number">03</span>
+            <div>
+              <h3>Digital presence</h3>
+              <p>Sites en content met compositie, hiërarchie en een duidelijk ritme in de scroll.</p>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
     <section id="work" class="work section reveal">
-      <div class="section-heading">
-        <p class="eyebrow">Selected work</p>
-        <h2>Een scrollbare ervaring met <span>ritme</span> en <span>impact</span>.</h2>
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2>Werk dat niet alleen <span>zichtbaar</span> is, maar ook <span>blijft hangen</span>.</h2>
+        </div>
+        <p class="section-intro">
+          Ik wil dat een project een herkenbare temperatuur krijgt. Hieronder zie je hoe ik meestal denk:
+          eerst wereld, dan detail. Eerst gevoel, dan afwerking.
+        </p>
       </div>
 
-      <div class="projects">
-        <article class="project-card featured card">
-          <div class="project-copy">
-            <p class="project-tag">Featured project</p>
-            <h3>Portfolio direction</h3>
-            <p>
-              Een cinematic portfolio-aanpak met sterke typografie, grote beelden en een rustige maar meeslepende scrollflow.
-            </p>
-            <ul>
-              <li>Art direction</li>
-              <li>Minimal dark interface</li>
-              <li>Immersive scrolling</li>
-            </ul>
-          </div>
-          <div class="project-image image-frame">
-            <img src="images/lio-portrait.png" alt="Featured visual van Lio Smeers">
-          </div>
-        </article>
-
-        <div class="project-list">
-          <article class="mini-project card reveal">
-            <p class="project-tag">Branding</p>
-            <h3>Identity Systems</h3>
-            <p>Van logo tot volledige visuele taal voor merken die willen opvallen.</p>
-          </article>
-          <article class="mini-project card reveal">
-            <p class="project-tag">Content</p>
-            <h3>Photo & Motion</h3>
-            <p>Statische en bewegende beelden voor social, campagnes en storytelling.</p>
-          </article>
-          <article class="mini-project card reveal">
-            <p class="project-tag">Web</p>
-            <h3>Digital Experiences</h3>
-            <p>Strakke websites met gelaagdheid, spanning en duidelijke navigatie.</p>
-          </article>
+      <div class="project-story card">
+        <div class="project-visual image-frame">
+          <img src="images/lio-portrait.png" alt="Featured visual van Lio Smeers">
         </div>
+        <div class="project-story-copy">
+          <p class="project-tag">Featured direction</p>
+          <h3>Cinematic portfolio language</h3>
+          <p>
+            Een portfolio hoeft niet aan te voelen als een verzameling blokken. De sterkste digitale ervaringen
+            hebben ritme, contrast en ademruimte. Ze laten je kijken in plaats van alleen scannen.
+          </p>
+          <ul class="project-points">
+            <li>Grote typografie met echte hiërarchie</li>
+            <li>Beelden die de sfeer dragen, niet enkel opvullen</li>
+            <li>Scrollflow die rustig maar intentioneel aanvoelt</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-grid">
+        <article class="mini-project card reveal">
+          <p class="project-tag">Branding</p>
+          <h3>Identity systems</h3>
+          <p>Van logo tot volledige merktaal voor projecten die een eigen plaats willen innemen.</p>
+        </article>
+        <article class="mini-project card reveal">
+          <p class="project-tag">Content</p>
+          <h3>Photo & motion</h3>
+          <p>Still en moving image met meer tactiliteit, schaduw en aanwezigheid.</p>
+        </article>
+        <article class="mini-project card reveal">
+          <p class="project-tag">Web</p>
+          <h3>Immersive digital</h3>
+          <p>Websites die aanvoelen als een zorgvuldig opgebouwde ruimte, niet als een template.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="process section reveal">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">Approach</p>
+          <h2>Ik ontwerp via <span>gevoel</span>, maar nooit zonder <span>structuur</span>.</h2>
+        </div>
+      </div>
+
+      <div class="process-rail">
+        <article class="process-step">
+          <span>01</span>
+          <h3>Atmosphere first</h3>
+          <p>We zoeken eerst de temperatuur van een project: scherp, zacht, stil, rebels, helder.</p>
+        </article>
+        <article class="process-step">
+          <span>02</span>
+          <h3>Build the language</h3>
+          <p>Typografie, beeld, kleur en compositie krijgen een herkenbaar systeem dat alles draagt.</p>
+        </article>
+        <article class="process-step">
+          <span>03</span>
+          <h3>Shape the experience</h3>
+          <p>Pas daarna komt de presentatie: hoe iets beweegt, leest, landt en blijft hangen.</p>
+        </article>
       </div>
     </section>
 
     <section id="services" class="services section reveal">
-      <div class="section-heading">
-        <p class="eyebrow">Diensten</p>
-        <h2>Wat ik kan <span>bouwen</span> voor jou.</h2>
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">Diensten</p>
+          <h2>Wat ik voor je kan <span>vormgeven</span>.</h2>
+        </div>
       </div>
 
       <div class="services-grid">
         <article class="service card">
-          <h3>Graphic Design</h3>
-          <p>Posters, layouts, social visuals en campagne-assets die er niet generisch uitzien.</p>
+          <h3>Graphic design</h3>
+          <p>Posters, layouts en campagnebeelden met meer karakter dan standaard contentblokken.</p>
         </article>
         <article class="service card">
           <h3>Branding</h3>
-          <p>Merkidentiteit, logo’s, kleuren, typografie en een stijl die klopt van begin tot eind.</p>
+          <p>Identiteiten die zowel helder als voelbaar zijn: visueel sterk, maar niet steriel.</p>
         </article>
         <article class="service card">
           <h3>Fotografie</h3>
-          <p>Portretten, sfeerbeelden en merkfotografie met karakter en emotie.</p>
+          <p>Portretten en sfeerbeelden die een merk of persoon tastbaar maken.</p>
         </article>
         <article class="service card">
           <h3>Video</h3>
-          <p>Korte video’s en visuele storytelling voor social media, branding en conceptwerk.</p>
+          <p>Korte visuele verhalen voor social, conceptpresentaties en merkcommunicatie.</p>
         </article>
         <article class="service card">
           <h3>Websites</h3>
-          <p>Eenvoudige maar sterke websites met goede visuele hiërarchie en moderne styling.</p>
+          <p>Compacte maar doordachte sites met compositie, diepte en een betere eerste indruk.</p>
         </article>
         <article class="service card">
-          <h3>Creative Direction</h3>
-          <p>Van idee tot look & feel: richting geven aan een project zodat alles coherenter aanvoelt.</p>
+          <h3>Creative direction</h3>
+          <p>Visuele richting voor projecten die coherentie nodig hebben van idee tot uitvoering.</p>
         </article>
       </div>
     </section>
 
     <section class="quote-section section reveal">
       <blockquote>
-        “Strong visuals don’t just look good — they make people feel something.”
+        Strong visuals don't ask for attention. They create a mood you want to stay inside.
       </blockquote>
     </section>
 
     <section id="contact" class="contact section reveal">
-      <div class="contact-card card glass">
-        <p class="eyebrow">Contact</p>
-        <h2>Zin om samen iets sterk te bouwen?</h2>
-        <p>
-          Klaar voor branding, visuals, content of een website met meer karakter?
-          Stuur me een bericht en we bekijken wat mogelijk is.
-        </p>
+      <div class="contact-shell card glass">
+        <div class="contact-copy">
+          <p class="eyebrow">Contact</p>
+          <h2>Als je iets wil maken dat niet generiek aanvoelt, praten we best eens.</h2>
+          <p>
+            Branding, content, art direction of een site met meer presence? Stuur me een bericht en we bekijken
+            hoe jouw project visueel sterker en eigenzinniger kan aanvoelen.
+          </p>
+        </div>
         <div class="contact-links">
           <a href="mailto:liosmeers545@gmail.com">liosmeers545@gmail.com</a>
           <a href="https://instagram.com/liosmeers" target="_blank" rel="noopener">@liosmeers</a>
