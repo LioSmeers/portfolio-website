@@ -422,6 +422,36 @@ main {
   gap: 1.5rem;
 }
 
+.immersive-panel {
+  position: relative;
+}
+
+.immersive-copy {
+  position: relative;
+  max-width: 56rem;
+  padding: 3rem 0;
+}
+
+.immersive-copy::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(18rem, 48vw);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(241, 179, 122, 0.5));
+}
+
+.immersive-copy h2 {
+  max-width: 10ch;
+}
+
+.immersive-copy p:last-child {
+  max-width: 44ch;
+  margin-top: 1rem;
+  color: var(--muted);
+}
+
 .card {
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -476,7 +506,8 @@ main {
   margin-bottom: 0.35rem;
 }
 
-.project-story {
+.project-story,
+.work-placeholder {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
   gap: 1.5rem;
@@ -509,6 +540,49 @@ main {
 .project-points li {
   padding-top: 0.75rem;
   border-top: 1px solid rgba(247, 235, 219, 0.12);
+}
+
+.placeholder-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 20rem;
+  padding: 0.6rem;
+}
+
+.placeholder-copy h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.3rem, 4.5vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+  margin: 0.8rem 0 1rem;
+}
+
+.placeholder-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.placeholder-tile {
+  min-height: 8.5rem;
+  padding: 1.3rem;
+  border: 1px solid rgba(247, 235, 219, 0.1);
+  border-radius: 1.4rem;
+  background: rgba(247, 235, 219, 0.03);
+}
+
+.placeholder-tile span {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  color: rgba(241, 179, 122, 0.86);
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.placeholder-tile p {
+  color: rgba(245, 239, 230, 0.84);
 }
 
 .project-grid,
@@ -632,6 +706,7 @@ main {
   .split-heading,
   .about-layout,
   .project-story,
+  .work-placeholder,
   .contact-shell,
   .project-grid,
   .services-grid,
@@ -659,6 +734,10 @@ main {
 
   .project-story-copy {
     padding: 0.6rem;
+  }
+
+  .placeholder-copy {
+    min-height: auto;
   }
 
   .contact-links {
@@ -721,6 +800,7 @@ main {
   }
 
   .project-story,
+  .work-placeholder,
   .contact-shell,
   .about-panel,
   .mini-project,
