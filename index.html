@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lio Smeers — Portfolio</title>
-  <meta name="description" content="Portfolio van Lio Smeers — graphic design, branding, fotografie en video.">
+  <title>Lio Smeers — Home</title>
+  <meta name="description" content="Portfolio van Lio Smeers met een moderne en elegante focus op branding, beeld en digitale vormgeving.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
@@ -17,30 +17,52 @@
   <div class="scroll-line"></div>
 
   <header class="site-header">
-    <a href="#top" class="logo">Lio Smeers</a>
-    <nav>
-      <a href="#about">Over mij</a>
-      <a href="#services">Diensten</a>
-      <a href="#work">Werk</a>
-      <a href="#process">Werkwijze</a>
-      <a href="#contact">Contact</a>
+    <div class="header-bar">
+      <a href="index.html" class="logo" aria-label="Ga naar home">
+        <span class="logo-mark"></span>
+        <span class="logo-text">
+          <span class="logo-title">Lio Smeers</span>
+          <span class="logo-subtitle">Visual design portfolio</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Hoofdnavigatie">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">Over mij</a>
+        <a href="services.html">Diensten</a>
+        <a href="work.html">Werk</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <nav class="mobile-menu" aria-label="Mobiele navigatie" data-mobile-menu>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">Over mij</a>
+      <a href="services.html">Diensten</a>
+      <a href="work.html">Werk</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main id="top">
+  <main>
     <section class="hero section reveal">
       <div class="hero-copy">
         <p class="eyebrow">Grafisch ontwerp / branding / foto / video</p>
-        <p class="hero-kicker">Donker, minimalistisch en visueel doordacht.</p>
-        <h1>Ik maak werk dat <span>rustig</span> oogt, maar toch <span>aanwezig</span> blijft.</h1>
+        <p class="hero-kicker">Modern, elegant en ruimtelijk opgebouwd.</p>
+        <h1 class="hero-title">Ik bouw beelden en websites die <span>stijlvol</span> blijven, ook in <span>beweging</span>.</h1>
         <p class="hero-text">
-          Ik ben Lio Smeers. Ik werk aan branding, beeld en digitale vormgeving met een stijl die
-          helder, professioneel en creatief aanvoelt. Geen overdaad, wel sterke keuzes in compositie,
-          typografie en sfeer.
+          Ik ben Lio Smeers. Mijn werk draait om rustige compositie, een verzorgde uitstraling en een moderne visuele taal
+          die professioneel aanvoelt. Deze site vertaalt dat nu naar een elegantere 3D-richting met meer diepte en ritme.
         </p>
         <div class="hero-actions">
-          <a href="#services" class="button primary">Wat ik maak</a>
-          <a href="#contact" class="button secondary">Neem contact op</a>
+          <a href="work.html" class="button primary">Bekijk richting</a>
+          <a href="contact.html" class="button secondary">Start een project</a>
         </div>
       </div>
 
@@ -56,15 +78,15 @@
           <div class="sculpture-pillar pillar-two"></div>
           <div class="sculpture-shadow"></div>
         </div>
-        <div class="hero-card image-frame tilt-card" data-tilt>
+        <div class="hero-card image-frame" data-tilt>
           <img src="images/lio-portrait.png" alt="Portret van Lio Smeers">
         </div>
-        <div class="floating-note note-one" data-float="0.8">Sterke compositie</div>
-        <div class="floating-note note-two" data-float="1.2">Creatief zonder ruis</div>
-        <div class="floating-note note-three" data-float="1">3D, maar beheerst</div>
+        <div class="floating-note note-one" data-float="0.8">Elegant in sfeer</div>
+        <div class="floating-note note-two" data-float="1.1">Ruimtelijk zonder drukte</div>
+        <div class="floating-note note-three" data-float="1">Professioneel en modern</div>
         <div class="hero-caption">
           <span>België</span>
-          <span>Beschikbaar voor visuele identiteiten, content en digitale presentaties</span>
+          <span>Beschikbaar voor branding, content en websites met een sterke visuele lijn</span>
         </div>
       </div>
     </section>
@@ -72,65 +94,46 @@
     <section class="marquee-band reveal" aria-label="Creatieve focus">
       <div class="marquee-track">
         <span>Branding met richting</span>
-        <span>Beeld met sfeer</span>
-        <span>Digitale vormgeving met ritme</span>
-        <span>Rustige layouts met karakter</span>
-        <span>Creatief werk dat helder blijft</span>
+        <span>Digitale vormgeving met diepte</span>
+        <span>Visuele rust met karakter</span>
+        <span>3D bewegingen die beheerst blijven</span>
+        <span>Editorial ritme in elk scherm</span>
         <span>Branding met richting</span>
-        <span>Beeld met sfeer</span>
-        <span>Digitale vormgeving met ritme</span>
-        <span>Rustige layouts met karakter</span>
-        <span>Creatief werk dat helder blijft</span>
+        <span>Digitale vormgeving met diepte</span>
+        <span>Visuele rust met karakter</span>
+        <span>3D bewegingen die beheerst blijven</span>
+        <span>Editorial ritme in elk scherm</span>
       </div>
     </section>
 
-    <section id="about" class="about section reveal">
-      <div class="section-heading split-heading">
-        <div>
-          <p class="eyebrow">Over mij</p>
-          <h2>Een minimalistische stijl met <span>sfeer</span> en <span>precisie</span>.</h2>
+    <section class="section reveal">
+      <div class="split-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Wat deze site nu doet</p>
+          <h2>Meer <span>modern</span>, meer <span>elegant</span> en duidelijker als portfolio.</h2>
         </div>
         <p class="section-intro">
-          Ik hou van werk dat professioneel en rustig aanvoelt, zonder vlak te worden.
-          Voor mij zit het verschil in detail, verhoudingen, typografie en weten wanneer iets net genoeg is.
+          De site is nu opgesplitst in meerdere pagina’s, heeft een betere mobiele navigatie en gebruikt
+          ruimtelijke vormen en animaties om een premium indruk te geven zonder onrustig te worden.
         </p>
       </div>
 
-      <div class="about-layout">
-        <article class="about-panel card glass">
-          <p>
-            Ik werk graag op het snijpunt van design, presentatie en beeld. Dat kan een merkidentiteit zijn,
-            een reeks visuals, social content of een website die meer doet dan alleen informatie tonen.
-          </p>
-          <p>
-            Mijn stijl hoeft niet luid te zijn om op te vallen. Ik zoek eerder naar een sterke basis:
-            duidelijke compositie, goede hiërarchie en een sfeer die volwassen en verzorgd aanvoelt.
-          </p>
+      <div class="feature-grid">
+        <article class="feature-card card reveal" data-tilt>
+          <p class="list-label">01</p>
+          <h3>Multipage structuur</h3>
+          <p>Home, over mij, diensten, werk en contact hebben nu elk hun eigen plek en meer focus.</p>
         </article>
-
-        <div class="about-side">
-          <article class="stat-strip">
-            <span class="stat-number">01</span>
-            <div>
-              <h3>Branding</h3>
-              <p>Logo, typografie, kleur en een visuele basis die een merk samenhang geeft.</p>
-            </div>
-          </article>
-          <article class="stat-strip">
-            <span class="stat-number">02</span>
-            <div>
-              <h3>Foto en video</h3>
-              <p>Beelden die sfeer opbouwen en een project of merk sterker laten voelen.</p>
-            </div>
-          </article>
-          <article class="stat-strip">
-            <span class="stat-number">03</span>
-            <div>
-              <h3>Digitale vormgeving</h3>
-              <p>Websites en content met duidelijke structuur, rustige spacing en een goede flow.</p>
-            </div>
-          </article>
-        </div>
+        <article class="feature-card card reveal" data-tilt>
+          <p class="list-label">02</p>
+          <h3>Modern 3D gevoel</h3>
+          <p>Diepte, licht, orbit-vormen en subtiele tilt-bewegingen zorgen voor een rijkere uitstraling.</p>
+        </article>
+        <article class="feature-card card reveal" data-tilt>
+          <p class="list-label">03</p>
+          <h3>Mobiele navigatie</h3>
+          <p>Een hamburger menu maakt de site nu ook op kleinere schermen bruikbaar en verzorgd.</p>
+        </article>
       </div>
     </section>
 
@@ -141,162 +144,62 @@
         <span class="immersive-beam"></span>
       </div>
       <div class="immersive-copy">
-        <p class="eyebrow">Stijl</p>
-        <h2>Donker, helder en zorgvuldig opgebouwd. <span>Niet koud, wel doordacht.</span></h2>
+        <p class="eyebrow">Visuele richting</p>
+        <h2>Donker, helder en met een <span>luxueuze rust</span> in de opbouw.</h2>
         <p>
-          Ik voel me het meest thuis in een visuele richting die minimalistisch blijft, maar toch iets oproept.
-          Geen drukte om indruk te maken, wel een sfeer die blijft staan door eenvoud, contrast en ritme.
+          De nieuwe stijl houdt vast aan je professionele basis, maar maakt die scherper: meer contrast, meer diepte,
+          schonere vlakken en animaties die de pagina laten leven zonder goedkoop aan te voelen.
         </p>
       </div>
     </section>
 
-    <section id="services" class="services section reveal">
-      <div class="section-heading split-heading">
-        <div>
-          <p class="eyebrow">Diensten</p>
-          <h2>Wat ik voor je kan <span>maken</span>.</h2>
-        </div>
-        <p class="section-intro">
-          Ik werk het liefst aan projecten waar vormgeving niet zomaar afwerking is,
-          maar echt mee bepaalt hoe iets overkomt.
-        </p>
-      </div>
-
-      <div class="services-grid">
-        <article class="service card" data-tilt>
-          <h3>Grafisch ontwerp</h3>
-          <p>Layouts, posters en visuals die helder, verzorgd en visueel sterk aanvoelen.</p>
-        </article>
-        <article class="service card" data-tilt>
-          <h3>Branding</h3>
-          <p>Een visuele identiteit met samenhang in logo, typografie, kleur en uitstraling.</p>
-        </article>
-        <article class="service card" data-tilt>
-          <h3>Fotografie</h3>
-          <p>Beelden met karakter die sfeer toevoegen aan een merk, persoon of project.</p>
-        </article>
-        <article class="service card" data-tilt>
-          <h3>Video</h3>
-          <p>Korte visuele content met aandacht voor ritme, presentatie en stijl.</p>
-        </article>
-        <article class="service card" data-tilt>
-          <h3>Websites</h3>
-          <p>Statische websites die eenvoudig blijven, maar wel professioneel en doordacht ogen.</p>
-        </article>
-        <article class="service card" data-tilt>
-          <h3>Creatieve richting</h3>
-          <p>Visuele richting geven aan een project zodat alles coherent en overtuigend aanvoelt.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="work" class="work section reveal">
-      <div class="section-heading split-heading">
-        <div>
-          <p class="eyebrow">Werk</p>
-          <h2>Deze plek blijft voorlopig <span>open</span> voor toekomstig werk.</h2>
-        </div>
-        <p class="section-intro">
-          Er zijn nog geen projecten of extra beelden toegevoegd. Daarom blijft deze sectie bewust rustig,
-          zodat ze later op een eerlijke en duidelijke manier kan ingevuld worden.
-        </p>
-      </div>
-
-      <div class="work-placeholder card" data-tilt>
+    <section class="section reveal">
+      <div class="work-highlight card glass">
         <div class="placeholder-copy">
-          <p class="project-tag">Binnenkort</p>
-          <h3>Hier komt geselecteerd werk.</h3>
-          <p>
-            Wanneer er projecten toegevoegd worden, krijgt elk project hier zijn eigen beeld,
-            context en visuele presentatie. Zo blijft deze site gemakkelijk uitbreidbaar.
+          <p class="project-tag">Snelle route</p>
+          <h3>Ontdek per pagina een duidelijker verhaal.</h3>
+          <p class="detail-text">
+            In plaats van alles op één scherm te proppen, krijgt elke rubriek nu meer ruimte. Dat oogt rustiger,
+            voelt moderner en maakt de site makkelijker uitbreidbaar wanneer je later projecten toevoegt.
           </p>
+          <div class="inline-actions">
+            <a href="about.html" class="button secondary">Meer over mij</a>
+            <a href="services.html" class="button ghost">Bekijk diensten</a>
+          </div>
         </div>
 
-        <div class="placeholder-grid" aria-label="Plaatsaanduiding voor toekomstig werk">
+        <div class="placeholder-grid" aria-label="Snelle links">
           <article class="placeholder-tile">
-            <span>01</span>
-            <p>Branding project</p>
+            <span>Over mij</span>
+            <p>Je stijl, visie en werkwijze in een rustigere en meer gerichte presentatie.</p>
           </article>
           <article class="placeholder-tile">
-            <span>02</span>
-            <p>Foto of video</p>
+            <span>Diensten</span>
+            <p>Een heldere indeling van branding, websites, beeld en creatieve richting.</p>
           </article>
           <article class="placeholder-tile">
-            <span>03</span>
-            <p>Website of layout</p>
+            <span>Werk & contact</span>
+            <p>Ruimte voor cases later, plus een duidelijke uitnodiging om contact op te nemen.</p>
           </article>
-        </div>
-      </div>
-
-      <div class="project-grid">
-        <article class="mini-project card reveal" data-tilt>
-          <p class="project-tag">Visuele lijn</p>
-          <h3>Rust voor het oog</h3>
-          <p>Ik werk graag met ruimte, contrast en compositie zodat een ontwerp volwassen aanvoelt.</p>
-        </article>
-        <article class="mini-project card reveal" data-tilt>
-          <p class="project-tag">Afwerking</p>
-          <h3>Details die tellen</h3>
-          <p>Kleine keuzes in typografie, ritme en uitlijning maken vaak het grootste verschil.</p>
-        </article>
-        <article class="mini-project card reveal" data-tilt>
-          <p class="project-tag">Stijl</p>
-          <h3>Creatief zonder chaos</h3>
-          <p>Ik zoek karakter en spanning, maar altijd binnen een heldere en verzorgde vorm.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="process" class="process section reveal">
-      <div class="section-heading split-heading">
-        <div>
-          <p class="eyebrow">Werkwijze</p>
-          <h2>Van eerste indruk naar een <span>sterke visuele lijn</span>.</h2>
-        </div>
-      </div>
-
-      <div class="process-rail">
-        <article class="process-step card" data-tilt>
-          <span>01</span>
-          <h3>Richting bepalen</h3>
-          <p>Eerst kijken we naar uitstraling, sfeer en wat een project visueel moet overbrengen.</p>
-        </article>
-        <article class="process-step card" data-tilt>
-          <span>02</span>
-          <h3>Vormgeving opbouwen</h3>
-          <p>Daarna werk ik met typografie, beeld en compositie aan een stijl die samenhangend blijft.</p>
-        </article>
-        <article class="process-step card" data-tilt>
-          <span>03</span>
-          <h3>Verfijnen</h3>
-          <p>Tot slot zit het verschil in ritme, spacing en details die het geheel professioneel laten voelen.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="quote-section section reveal">
-      <blockquote>
-        Goed visueel werk hoeft niet luid te zijn. Het moet juist aanvoelen.
-      </blockquote>
-    </section>
-
-    <section id="contact" class="contact section reveal">
-      <div class="contact-shell card glass">
-        <div class="contact-copy">
-          <p class="eyebrow">Contact</p>
-          <h2>Heb je een idee, merk of project dat visueel sterker mag aanvoelen?</h2>
-          <p>
-            Als je op zoek bent naar een rustige, professionele en creatieve aanpak,
-            mag je mij altijd een bericht sturen.
-          </p>
-        </div>
-        <div class="contact-links">
-          <a href="mailto:liosmeers545@gmail.com">liosmeers545@gmail.com</a>
-          <a href="https://instagram.com/liosmeers" target="_blank" rel="noopener">@liosmeers</a>
         </div>
       </div>
     </section>
   </main>
+
+  <footer class="footer">
+    <div class="footer-shell">
+      <div class="footer-copy">
+        <h3>Klaar om dit nog verder te verfijnen.</h3>
+        <p>De basis is nu moderner en sterker. Vanaf hier kunnen we echte projecten, cases en extra visuals toevoegen.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigatie">
+        <a href="about.html">Over mij</a>
+        <a href="services.html">Diensten</a>
+        <a href="work.html">Werk</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>

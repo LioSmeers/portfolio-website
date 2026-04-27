@@ -3,7 +3,10 @@ const progress = document.querySelector(".scroll-line");
 const gradients = document.querySelectorAll("[data-depth]");
 const tiltItems = document.querySelectorAll("[data-tilt]");
 const floatingItems = document.querySelectorAll("[data-float]");
-const heroStage = document.querySelector("[data-stage]");
+const stageItems = document.querySelectorAll("[data-stage]");
+const menuToggle = document.querySelector("[data-menu-toggle]");
+const mobileMenu = document.querySelector("[data-mobile-menu]");
+const mobileLinks = document.querySelectorAll("[data-mobile-menu] a");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const observer = new IntersectionObserver((entries) => {
@@ -13,7 +16,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.15
+  threshold: 0.14
 });
 
 reveals.forEach((item) => observer.observe(item));
@@ -23,7 +26,9 @@ const updateScrollState = () => {
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
   const progressWidth = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
 
-  progress.style.width = `${progressWidth}%`;
+  if (progress) {
+    progress.style.width = `${progressWidth}%`;
+  }
 
   if (prefersReducedMotion) {
     return;
@@ -43,6 +48,34 @@ const updateScrollState = () => {
 window.addEventListener("scroll", updateScrollState, { passive: true });
 updateScrollState();
 
+const setMenuState = (isOpen) => {
+  if (!menuToggle || !mobileMenu) {
+    return;
+  }
+
+  menuToggle.classList.toggle("is-open", isOpen);
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  mobileMenu.classList.toggle("is-open", isOpen);
+  document.body.classList.toggle("menu-open", isOpen);
+};
+
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    setMenuState(!isOpen);
+  });
+
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => setMenuState(false));
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 860) {
+      setMenuState(false);
+    }
+  });
+}
+
 if (!prefersReducedMotion) {
   tiltItems.forEach((item) => {
     const resetTilt = () => {
@@ -53,9 +86,9 @@ if (!prefersReducedMotion) {
       const bounds = item.getBoundingClientRect();
       const px = (event.clientX - bounds.left) / bounds.width;
       const py = (event.clientY - bounds.top) / bounds.height;
-      const rotateY = (px - 0.5) * 10;
-      const rotateX = (0.5 - py) * 10;
-      const lift = item.classList.contains("hero-card") ? 110 : 16;
+      const rotateY = (px - 0.5) * 9;
+      const rotateX = (0.5 - py) * 9;
+      const lift = item.classList.contains("hero-card") ? 120 : 16;
 
       item.style.transform = `perspective(1200px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translate3d(0, -6px, ${lift}px)`;
     });
@@ -63,17 +96,20 @@ if (!prefersReducedMotion) {
     item.addEventListener("pointerleave", resetTilt);
   });
 
-  if (heroStage) {
+  stageItems.forEach((stage) => {
+    const resetStage = () => {
+      stage.style.transform = "";
+    };
+
     window.addEventListener("mousemove", (event) => {
       const { innerWidth, innerHeight } = window;
       const offsetX = (event.clientX / innerWidth) - 0.5;
       const offsetY = (event.clientY / innerHeight) - 0.5;
 
-      heroStage.style.transform = `rotateX(${(offsetY * -3).toFixed(2)}deg) rotateY(${(offsetX * 4).toFixed(2)}deg)`;
+      stage.style.transform = `rotateX(${(offsetY * -2.5).toFixed(2)}deg) rotateY(${(offsetX * 3.5).toFixed(2)}deg)`;
     });
 
-    document.addEventListener("mouseleave", () => {
-      heroStage.style.transform = "";
-    });
-  }
+    stage.addEventListener("pointerleave", resetStage);
+    document.addEventListener("mouseleave", resetStage);
+  });
 }
