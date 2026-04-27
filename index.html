@@ -1,66 +1,193 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lio Smeers Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lio Smeers — Portfolio</title>
+  <meta name="description" content="Portfolio van Lio Smeers — graphic design, branding, fotografie en video.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="page-glow"></div>
+  <div class="scroll-line"></div>
 
-    <header>
-        <h1>Lio Smeers</h1>
-        <p>Graphic Design • Branding • Foto • Video</p>
-        <a href="#contact" class="button">Contacteer mij</a>
-    </header>
+  <header class="site-header">
+    <a href="#top" class="logo">Lio Smeers</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <section>
-        <h2>Over mij</h2>
-        <p>
-            Ik ben Lio Smeers, een creatieve maker met focus op graphic design,
-            branding, fotografie en video. Ik help merken en bedrijven sterker
-            visueel communiceren.
+  <main id="top">
+    <section class="hero section reveal">
+      <div class="hero-copy">
+        <p class="eyebrow">Graphic Design • Branding • Foto • Video</p>
+        <h1>I build visual stories that <span>hit harder</span> than generic content.</h1>
+        <p class="hero-text">
+          Ik ben Lio Smeers, een creatieve maker met een focus op design, beeld en merkbeleving.
+          Ik help merken en projecten sterker communiceren met een visuele stijl die niet vergeetbaar is.
         </p>
-    </section>
-
-    <section>
-        <h2>Mijn werk</h2>
-
-        <div class="grid">
-            <div class="card">
-                <h3>Branding project</h3>
-                <p>Logo, kleuren, typografie en visuele stijl.</p>
-            </div>
-
-            <div class="card">
-                <h3>Fotografie</h3>
-                <p>Beeldreeksen voor merken, events of campagnes.</p>
-            </div>
-
-            <div class="card">
-                <h3>Video</h3>
-                <p>Korte video’s, social content en storytelling.</p>
-            </div>
+        <div class="hero-actions">
+          <a href="#work" class="button primary">Bekijk mijn werk</a>
+          <a href="#contact" class="button secondary">Contacteer mij</a>
         </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="image-frame large">
+          <img src="images/lio-portrait.png" alt="Portret van Lio Smeers">
+        </div>
+        <div class="floating-note note-one">Creative direction</div>
+        <div class="floating-note note-two">Immersive visuals</div>
+      </div>
     </section>
 
-    <section>
-        <h2>Diensten</h2>
-        <ul>
-            <li>Graphic design</li>
-            <li>Branding</li>
-            <li>Social media content</li>
-            <li>Fotografie</li>
-            <li>Video</li>
-            <li>Simpele websites</li>
-        </ul>
+    <section id="about" class="about section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Over mij</p>
+        <h2>Niet gewoon mooi. <span>Doordacht.</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text card glass">
+          <p>
+            Mijn werk zit op het snijpunt van design, storytelling en strategie.
+            Ik hou van visuele concepten die sfeer opbouwen en tegelijk helder communiceren.
+            Geen drukke rommel, geen standaard templates — wel sterk beeld, duidelijke richting en een eigen vibe.
+          </p>
+          <p>
+            Ik werk graag aan branding, campagnes, fotografie, video en digitale ervaringen.
+            Vooral projecten waar gevoel, stijl en verhaal samenkomen, passen bij mij.
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat card">
+            <span>01</span>
+            <h3>Branding</h3>
+            <p>Identiteit, logo, typografie en visuele richting.</p>
+          </article>
+          <article class="stat card">
+            <span>02</span>
+            <h3>Foto / Video</h3>
+            <p>Beeld dat een merk of verhaal tastbaar maakt.</p>
+          </article>
+          <article class="stat card">
+            <span>03</span>
+            <h3>Digital</h3>
+            <p>Websites en content met ritme, hiërarchie en sfeer.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Mail: jouwmail@example.com</p>
-        <p>Instagram: @jouwinstagram</p>
+    <section id="work" class="work section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Selected work</p>
+        <h2>Een scrollbare ervaring met <span>ritme</span> en <span>impact</span>.</h2>
+      </div>
+
+      <div class="projects">
+        <article class="project-card featured card">
+          <div class="project-copy">
+            <p class="project-tag">Featured project</p>
+            <h3>Portfolio direction</h3>
+            <p>
+              Een cinematic portfolio-aanpak met sterke typografie, grote beelden en een rustige maar meeslepende scrollflow.
+            </p>
+            <ul>
+              <li>Art direction</li>
+              <li>Minimal dark interface</li>
+              <li>Immersive scrolling</li>
+            </ul>
+          </div>
+          <div class="project-image image-frame">
+            <img src="images/lio-portrait.png" alt="Featured visual van Lio Smeers">
+          </div>
+        </article>
+
+        <div class="project-list">
+          <article class="mini-project card reveal">
+            <p class="project-tag">Branding</p>
+            <h3>Identity Systems</h3>
+            <p>Van logo tot volledige visuele taal voor merken die willen opvallen.</p>
+          </article>
+          <article class="mini-project card reveal">
+            <p class="project-tag">Content</p>
+            <h3>Photo & Motion</h3>
+            <p>Statische en bewegende beelden voor social, campagnes en storytelling.</p>
+          </article>
+          <article class="mini-project card reveal">
+            <p class="project-tag">Web</p>
+            <h3>Digital Experiences</h3>
+            <p>Strakke websites met gelaagdheid, spanning en duidelijke navigatie.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
+    <section id="services" class="services section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Diensten</p>
+        <h2>Wat ik kan <span>bouwen</span> voor jou.</h2>
+      </div>
+
+      <div class="services-grid">
+        <article class="service card">
+          <h3>Graphic Design</h3>
+          <p>Posters, layouts, social visuals en campagne-assets die er niet generisch uitzien.</p>
+        </article>
+        <article class="service card">
+          <h3>Branding</h3>
+          <p>Merkidentiteit, logo’s, kleuren, typografie en een stijl die klopt van begin tot eind.</p>
+        </article>
+        <article class="service card">
+          <h3>Fotografie</h3>
+          <p>Portretten, sfeerbeelden en merkfotografie met karakter en emotie.</p>
+        </article>
+        <article class="service card">
+          <h3>Video</h3>
+          <p>Korte video’s en visuele storytelling voor social media, branding en conceptwerk.</p>
+        </article>
+        <article class="service card">
+          <h3>Websites</h3>
+          <p>Eenvoudige maar sterke websites met goede visuele hiërarchie en moderne styling.</p>
+        </article>
+        <article class="service card">
+          <h3>Creative Direction</h3>
+          <p>Van idee tot look & feel: richting geven aan een project zodat alles coherenter aanvoelt.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="quote-section section reveal">
+      <blockquote>
+        “Strong visuals don’t just look good — they make people feel something.”
+      </blockquote>
+    </section>
+
+    <section id="contact" class="contact section reveal">
+      <div class="contact-card card glass">
+        <p class="eyebrow">Contact</p>
+        <h2>Zin om samen iets sterk te bouwen?</h2>
+        <p>
+          Klaar voor branding, visuals, content of een website met meer karakter?
+          Stuur me een bericht en we bekijken wat mogelijk is.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:jouwmail@example.com">jouwmail@example.com</a>
+          <a href="https://instagram.com/jouwinstagram" target="_blank" rel="noopener">@jouwinstagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

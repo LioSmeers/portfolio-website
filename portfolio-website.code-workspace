@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "portfolio-website",
+			"path": "."
+		},
+		{
+			"name": "images",
+			"path": "../../immersive-portfolio/images"
+		}
+	],
+	"settings": {}
+}

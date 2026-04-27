@@ -1,16 +1,16 @@
-# Portfolio Website
+# Lio Smeers — Immersive Portfolio
 
-Simpele portfolio-website voor Lio Smeers.
+Bestanden:
+- `index.html`
+- `style.css`
+- `script.js`
+- `images/lio-portrait.png`
 
-## Bestanden
-- `index.html` = structuur van de website
-- `style.css` = styling van de website
-
-## Aanpassen
-Open `index.html` en vervang:
-- `jouwmail@example.com`
-- `@jouwinstagram`
-- de tekst bij projecten en diensten
+## Wat nog aanpassen?
+1. Vervang `jouwmail@example.com` door je echte mail.
+2. Vervang `jouwinstagram` door je echte Instagram.
+3. Voeg je echte projecten toe in de work-sectie.
+4. Voeg extra foto's toe in de map `images/` en vervang waar nodig de `src` in HTML.
 
 ## Online zetten
-Upload deze bestanden naar GitHub of sleep de map naar Netlify.
+Upload alle bestanden naar je GitHub-repository en laat Netlify opnieuw deployen.
