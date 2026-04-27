@@ -15,6 +15,7 @@
   --accent: #f1b37a;
   --accent-soft: #d67d58;
   --shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+  --shadow-deep: 0 45px 120px rgba(0, 0, 0, 0.45);
   --radius: 28px;
   --content-width: min(1180px, 88vw);
 }
@@ -286,12 +287,17 @@ main {
   min-height: 42rem;
   display: grid;
   place-items: center;
+  perspective: 1600px;
+  transform-style: preserve-3d;
+  transition: transform 0.35s ease-out;
+  will-change: transform;
 }
 
 .hero-orbit {
   position: absolute;
   border: 1px solid rgba(247, 235, 219, 0.14);
   border-radius: 50%;
+  transform-style: preserve-3d;
 }
 
 .orbit-one {
@@ -304,11 +310,109 @@ main {
   height: 62%;
 }
 
+.hero-depth-grid {
+  position: absolute;
+  inset: 7% 4%;
+  border-radius: 2.5rem;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 68px 68px;
+  mask-image: radial-gradient(circle at center, black 36%, transparent 88%);
+  transform: rotateX(76deg) translateZ(-90px);
+  opacity: 0.28;
+}
+
+.hero-sculpture {
+  position: absolute;
+  inset: 12% 13% 10% 13%;
+  transform-style: preserve-3d;
+  animation: sculptureDrift 10s ease-in-out infinite;
+}
+
+.sculpture-ring,
+.sculpture-core,
+.sculpture-pillar,
+.sculpture-shadow {
+  position: absolute;
+  inset: 50%;
+  transform-style: preserve-3d;
+}
+
+.sculpture-ring {
+  border-radius: 50%;
+  border: 1px solid rgba(247, 235, 219, 0.14);
+  box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.03);
+}
+
+.ring-large {
+  width: 22rem;
+  height: 22rem;
+  margin: -11rem 0 0 -11rem;
+  transform: rotateX(74deg) rotateY(-24deg) translateZ(-36px);
+}
+
+.ring-small {
+  width: 12rem;
+  height: 12rem;
+  margin: -6rem 0 0 -6rem;
+  transform: rotateX(74deg) rotateY(24deg) translateZ(58px);
+}
+
+.sculpture-core {
+  width: 8.5rem;
+  height: 8.5rem;
+  margin: -4.25rem 0 0 -4.25rem;
+  border-radius: 2.2rem;
+  background:
+    linear-gradient(145deg, rgba(255, 240, 220, 0.95), rgba(214, 125, 88, 0.7)),
+    rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 0 0 1px rgba(255, 240, 220, 0.18),
+    0 30px 70px rgba(214, 125, 88, 0.18);
+  transform: rotateX(18deg) rotateY(-26deg) translateZ(46px);
+}
+
+.sculpture-core::before {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+}
+
+.sculpture-pillar {
+  width: 1.4rem;
+  height: 12rem;
+  margin: -6rem 0 0 -0.7rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 240, 220, 0.2), rgba(247, 235, 219, 0.02));
+}
+
+.pillar-one {
+  transform: translate3d(-8rem, -1.5rem, -12px) rotateZ(18deg);
+}
+
+.pillar-two {
+  transform: translate3d(8rem, 1rem, 24px) rotateZ(-18deg);
+}
+
+.sculpture-shadow {
+  width: 20rem;
+  height: 20rem;
+  margin: -10rem 0 0 -10rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(214, 125, 88, 0.18), transparent 68%);
+  filter: blur(28px);
+  transform: translateZ(-80px) scaleY(0.42);
+}
+
 .hero-card {
   position: relative;
   width: min(32rem, 88%);
   aspect-ratio: 4 / 5;
   z-index: 2;
+  transform: translateZ(110px);
 }
 
 .image-frame {
@@ -329,7 +433,8 @@ main {
 
 .tilt-card {
   transform-style: preserve-3d;
-  transition: transform 0.18s ease-out;
+  transition: transform 0.18s ease-out, box-shadow 0.3s ease;
+  will-change: transform;
 }
 
 .floating-note {
@@ -343,6 +448,7 @@ main {
   background: rgba(20, 15, 13, 0.52);
   box-shadow: var(--shadow);
   font-size: 0.92rem;
+  transform: translateZ(120px);
 }
 
 .note-one {
@@ -355,6 +461,11 @@ main {
   bottom: 16%;
 }
 
+.note-three {
+  top: 54%;
+  left: -2%;
+}
+
 .hero-caption {
   position: absolute;
   left: 0;
@@ -364,6 +475,7 @@ main {
   max-width: 18rem;
   font-size: 0.88rem;
   color: rgba(245, 239, 230, 0.72);
+  transform: translateZ(70px);
 }
 
 .marquee-band {
@@ -424,6 +536,7 @@ main {
 
 .immersive-panel {
   position: relative;
+  overflow: hidden;
 }
 
 .immersive-copy {
@@ -452,15 +565,76 @@ main {
   color: var(--muted);
 }
 
+.immersive-objects {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  perspective: 1400px;
+}
+
+.immersive-disc,
+.immersive-beam {
+  position: absolute;
+  display: block;
+}
+
+.immersive-disc {
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgba(255, 240, 220, 0.22), rgba(214, 125, 88, 0.03) 62%, transparent 72%);
+  border: 1px solid rgba(247, 235, 219, 0.09);
+  filter: blur(0.2px);
+}
+
+.disc-one {
+  top: 8%;
+  right: 4%;
+  width: 18rem;
+  height: 18rem;
+  transform: rotateX(72deg) rotateY(22deg);
+}
+
+.disc-two {
+  bottom: 8%;
+  right: 18%;
+  width: 8rem;
+  height: 8rem;
+  transform: rotateX(72deg) translateZ(20px);
+}
+
+.immersive-beam {
+  top: 18%;
+  right: 14%;
+  width: 1px;
+  height: 14rem;
+  background: linear-gradient(180deg, rgba(241, 179, 122, 0.5), transparent);
+  transform: rotateZ(28deg);
+}
+
 .card {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: linear-gradient(180deg, rgba(247, 235, 219, 0.08), rgba(247, 235, 219, 0.03));
   box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
 }
 
 .glass {
   backdrop-filter: blur(16px);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 34%, transparent 62%, rgba(255, 255, 255, 0.05));
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.card:hover::before {
+  opacity: 1;
 }
 
 .about-panel {
@@ -570,6 +744,13 @@ main {
   border: 1px solid rgba(247, 235, 219, 0.1);
   border-radius: 1.4rem;
   background: rgba(247, 235, 219, 0.03);
+  transform: translateZ(0);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.placeholder-tile:hover {
+  transform: translateY(-4px) translateZ(12px);
+  border-color: rgba(241, 179, 122, 0.22);
 }
 
 .placeholder-tile span {
@@ -596,14 +777,16 @@ main {
 .service {
   min-height: 15rem;
   padding: 1.5rem;
-  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .mini-project:hover,
 .service:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6px) translateZ(16px);
   border-color: rgba(241, 179, 122, 0.28);
   background: linear-gradient(180deg, rgba(247, 235, 219, 0.11), rgba(247, 235, 219, 0.05));
+  box-shadow: var(--shadow-deep);
 }
 
 .process-rail {
@@ -615,7 +798,10 @@ main {
 .process-step {
   position: relative;
   padding: 1.6rem 1.4rem 1.8rem;
-  border-top: 1px solid rgba(247, 235, 219, 0.15);
+  min-height: 15rem;
+  background:
+    linear-gradient(180deg, rgba(247, 235, 219, 0.08), rgba(247, 235, 219, 0.03)),
+    radial-gradient(circle at top right, rgba(241, 179, 122, 0.08), transparent 34%);
 }
 
 .process-step::before {
@@ -665,6 +851,15 @@ main {
   border-bottom: 1px solid rgba(247, 235, 219, 0.28);
 }
 
+[data-tilt] > * {
+  position: relative;
+  z-index: 1;
+}
+
+[data-tilt] {
+  transform-style: preserve-3d;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(36px);
@@ -686,6 +881,17 @@ main {
   }
 }
 
+@keyframes sculptureDrift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotateZ(0deg);
+  }
+
+  50% {
+    transform: translate3d(0, -12px, 0) rotateZ(-2deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -694,7 +900,9 @@ main {
   .reveal,
   .tilt-card,
   .page-gradient,
-  .marquee-track {
+  .marquee-track,
+  .hero-sculpture,
+  [data-tilt] {
     transition: none;
     animation: none;
     transform: none;
@@ -724,6 +932,10 @@ main {
 
   .hero-stage {
     min-height: 35rem;
+  }
+
+  .hero-sculpture {
+    inset: 14% 10% 14% 10%;
   }
 
   .hero-caption {
@@ -782,6 +994,12 @@ main {
 
   .hero-card {
     width: min(100%, 24rem);
+  }
+
+  .hero-depth-grid,
+  .hero-sculpture,
+  .immersive-objects {
+    opacity: 0.72;
   }
 
   .floating-note {

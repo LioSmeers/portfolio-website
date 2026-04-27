@@ -44,14 +44,24 @@
         </div>
       </div>
 
-      <div class="hero-stage">
+      <div class="hero-stage" data-stage>
+        <div class="hero-depth-grid"></div>
         <div class="hero-orbit orbit-one"></div>
         <div class="hero-orbit orbit-two"></div>
+        <div class="hero-sculpture" aria-hidden="true">
+          <div class="sculpture-ring ring-large"></div>
+          <div class="sculpture-ring ring-small"></div>
+          <div class="sculpture-core"></div>
+          <div class="sculpture-pillar pillar-one"></div>
+          <div class="sculpture-pillar pillar-two"></div>
+          <div class="sculpture-shadow"></div>
+        </div>
         <div class="hero-card image-frame tilt-card" data-tilt>
           <img src="images/lio-portrait.png" alt="Portret van Lio Smeers">
         </div>
-        <div class="floating-note note-one">Sterke compositie</div>
-        <div class="floating-note note-two">Creatief zonder ruis</div>
+        <div class="floating-note note-one" data-float="0.8">Sterke compositie</div>
+        <div class="floating-note note-two" data-float="1.2">Creatief zonder ruis</div>
+        <div class="floating-note note-three" data-float="1">3D, maar beheerst</div>
         <div class="hero-caption">
           <span>België</span>
           <span>Beschikbaar voor visuele identiteiten, content en digitale presentaties</span>
@@ -125,6 +135,11 @@
     </section>
 
     <section class="immersive-panel section reveal">
+      <div class="immersive-objects" aria-hidden="true">
+        <span class="immersive-disc disc-one"></span>
+        <span class="immersive-disc disc-two"></span>
+        <span class="immersive-beam"></span>
+      </div>
       <div class="immersive-copy">
         <p class="eyebrow">Stijl</p>
         <h2>Donker, helder en zorgvuldig opgebouwd. <span>Niet koud, wel doordacht.</span></h2>
@@ -148,27 +163,27 @@
       </div>
 
       <div class="services-grid">
-        <article class="service card">
+        <article class="service card" data-tilt>
           <h3>Grafisch ontwerp</h3>
           <p>Layouts, posters en visuals die helder, verzorgd en visueel sterk aanvoelen.</p>
         </article>
-        <article class="service card">
+        <article class="service card" data-tilt>
           <h3>Branding</h3>
           <p>Een visuele identiteit met samenhang in logo, typografie, kleur en uitstraling.</p>
         </article>
-        <article class="service card">
+        <article class="service card" data-tilt>
           <h3>Fotografie</h3>
           <p>Beelden met karakter die sfeer toevoegen aan een merk, persoon of project.</p>
         </article>
-        <article class="service card">
+        <article class="service card" data-tilt>
           <h3>Video</h3>
           <p>Korte visuele content met aandacht voor ritme, presentatie en stijl.</p>
         </article>
-        <article class="service card">
+        <article class="service card" data-tilt>
           <h3>Websites</h3>
           <p>Statische websites die eenvoudig blijven, maar wel professioneel en doordacht ogen.</p>
         </article>
-        <article class="service card">
+        <article class="service card" data-tilt>
           <h3>Creatieve richting</h3>
           <p>Visuele richting geven aan een project zodat alles coherent en overtuigend aanvoelt.</p>
         </article>
@@ -187,7 +202,7 @@
         </p>
       </div>
 
-      <div class="work-placeholder card">
+      <div class="work-placeholder card" data-tilt>
         <div class="placeholder-copy">
           <p class="project-tag">Binnenkort</p>
           <h3>Hier komt geselecteerd werk.</h3>
@@ -214,17 +229,17 @@
       </div>
 
       <div class="project-grid">
-        <article class="mini-project card reveal">
+        <article class="mini-project card reveal" data-tilt>
           <p class="project-tag">Visuele lijn</p>
           <h3>Rust voor het oog</h3>
           <p>Ik werk graag met ruimte, contrast en compositie zodat een ontwerp volwassen aanvoelt.</p>
         </article>
-        <article class="mini-project card reveal">
+        <article class="mini-project card reveal" data-tilt>
           <p class="project-tag">Afwerking</p>
           <h3>Details die tellen</h3>
           <p>Kleine keuzes in typografie, ritme en uitlijning maken vaak het grootste verschil.</p>
         </article>
-        <article class="mini-project card reveal">
+        <article class="mini-project card reveal" data-tilt>
           <p class="project-tag">Stijl</p>
           <h3>Creatief zonder chaos</h3>
           <p>Ik zoek karakter en spanning, maar altijd binnen een heldere en verzorgde vorm.</p>
@@ -241,17 +256,17 @@
       </div>
 
       <div class="process-rail">
-        <article class="process-step">
+        <article class="process-step card" data-tilt>
           <span>01</span>
           <h3>Richting bepalen</h3>
           <p>Eerst kijken we naar uitstraling, sfeer en wat een project visueel moet overbrengen.</p>
         </article>
-        <article class="process-step">
+        <article class="process-step card" data-tilt>
           <span>02</span>
           <h3>Vormgeving opbouwen</h3>
           <p>Daarna werk ik met typografie, beeld en compositie aan een stijl die samenhangend blijft.</p>
         </article>
-        <article class="process-step">
+        <article class="process-step card" data-tilt>
           <span>03</span>
           <h3>Verfijnen</h3>
           <p>Tot slot zit het verschil in ritme, spacing en details die het geheel professioneel laten voelen.</p>
